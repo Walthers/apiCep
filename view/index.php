@@ -24,33 +24,34 @@ echo "
 <h2>Resultado:</h2>
 ";
 
-if (!empty($result)){
+if (!empty($result)) {
     echo "
         <style type='text/css'>
         .tg {border-collapse:collapse;border-spacing:0;margin:10px auto;}
         .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
         .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-        .tg .tg-baqh{text-align:center;vertical-align:top}
+        .tg .tg-baqh{text-align:center;vertical-align:top;}
+        .tg .tg-baqh-title{font-weight: bold;}
         .tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}</style>
         <div class='tg-wrap'>";
-            foreach ($result as $values) {
-                echo "
+    foreach ($result as $values) {
+        echo "
                 <table class='tg'>
                     <tr>
-                        <th class='tg-baqh'>Localização</th>
-                        <th class='tg-baqh'>Dados</th>
+                        <th class='tg-baqh-title'>Localização</th>
+                        <th class='tg-baqh-title'>Dados</th>
                     </tr>";
-                foreach ($values as $key => $value){
-                    echo "
+        foreach ($values as $key => $value) {
+            echo "
                     <tr>
                         <td class='tg-baqh'>{$key}</td>
                         <td class='tg-baqh'>{$value}</td>
                     </tr>";
-                }
-                echo "</table>";
-            }
-        echo "</div>";
+        }
+        echo "</table>";
+    }
+    echo "</div>";
 } else {
-    echo "<h2>CEP/Endereço inválido!</h2>"; 
+    echo "<h2>CEP/Endereço inválido!</h2>";
 }
 ?>
