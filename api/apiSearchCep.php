@@ -1,6 +1,5 @@
-<?php   
-namespace Cep;
-
+<?php
+require_once "../phpQuery/phpQuery.php";
 class Cep
 {
     public function buscarCep($endereco){
